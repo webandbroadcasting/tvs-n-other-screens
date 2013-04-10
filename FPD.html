@@ -1,0 +1,961 @@
+<html lang="en" dir="ltr"><head>
+    <title>Repository of Existing Business-Level Use Cases for TVs In Tandem With Other Screens that Enrich Programs and Commercials via the Web</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <!-- 
+      === NOTA BENE ===
+      For the three scripts below, if your spec resides on dev.w3 you can check them
+      out in the same tree and use relative links so that they'll work offline,
+     -->
+    
+    
+
+<style>/*****************************************************************
+ * ReSpec 3 CSS
+ * Robin Berjon - http://berjon.com/
+ *****************************************************************/
+
+/* --- INLINES --- */
+em.rfc2119 { 
+    text-transform:     lowercase;
+    font-variant:       small-caps;
+    font-style:         normal;
+    color:              #900;
+}
+
+h1 acronym, h2 acronym, h3 acronym, h4 acronym, h5 acronym, h6 acronym, a acronym,
+h1 abbr, h2 abbr, h3 abbr, h4 abbr, h5 abbr, h6 abbr, a abbr {
+    border: none;
+}
+
+dfn {
+    font-weight:    bold;
+}
+
+a.internalDFN {
+    color:  inherit;
+    border-bottom:  1px solid #99c;
+    text-decoration:    none;
+}
+
+a.externalDFN {
+    color:  inherit;
+    border-bottom:  1px dotted #ccc;
+    text-decoration:    none;
+}
+
+a.bibref {
+    text-decoration:    none;
+}
+
+cite .bibref {
+    font-style: normal;
+}
+
+code {
+    color:  #ff4500;
+}
+
+
+/* --- --- */
+ol.algorithm { counter-reset:numsection; list-style-type: none; }
+ol.algorithm li { margin: 0.5em 0; }
+ol.algorithm li:before { font-weight: bold; counter-increment: numsection; content: counters(numsection, ".") ") "; }
+
+/* --- TOC --- */
+.toc a, .tof a {
+    text-decoration:    none;
+}
+
+a .secno, a .figno {
+    color:  #000;
+}
+
+ul.tof, ol.tof {
+    list-style: none outside none;
+}
+
+.caption {
+    margin-top: 0.5em;
+    font-style:   italic;
+}
+
+/* --- TABLE --- */
+table.simple {
+    border-spacing: 0;
+    border-collapse:    collapse;
+    border-bottom:  3px solid #005a9c;
+}
+
+.simple th {
+    background: #005a9c;
+    color:  #fff;
+    padding:    3px 5px;
+    text-align: left;
+}
+
+.simple th[scope="row"] {
+    background: inherit;
+    color:  inherit;
+    border-top: 1px solid #ddd;
+}
+
+.simple td {
+    padding:    3px 10px;
+    border-top: 1px solid #ddd;
+}
+
+.simple tr:nth-child(even) {
+    background: #f0f6ff;
+}
+
+/* --- DL --- */
+.section dd > p:first-child {
+    margin-top: 0;
+}
+
+.section dd > p:last-child {
+    margin-bottom: 0;
+}
+
+.section dd {
+    margin-bottom:  1em;
+}
+
+.section dl.attrs dd, .section dl.eldef dd {
+    margin-bottom:  0;
+}
+</style><link rel="stylesheet" href="http://www.w3.org/StyleSheets/TR/W3C-ED"></head>
+<body style="background-repeat: no-repeat; background-image: url(logo-BG-PD.png); "><div class="head">
+  <p>
+    
+      <a href="http://www.w3.org/"><img width="72" height="48" src="http://www.w3.org/Icons/w3c_home" alt="W3C"></a>
+    
+  </p>
+  <h1 class="title" id="title">Repository of Existing Business-Level Use Cases for TVs In Tandem With Other Screens that Enrich Programs and Commercials via the Web</h1>
+  
+  <h2 id="w3c-editor-s-draft-28-march-2013"><abbr title="World Wide Web Consortium">W3C</abbr> Business Group Note Public Draft 8 April 2013</h2>
+  <dl>
+
+      <dt>This Version:</dt>
+      <dd><a href="http://webandbroadcasting.github.com/tvs-n-other-screens/">http://webandbroadcasting.github.com/tvs-n-other-screens/</a></dd>
+      <dt>Latest Public Draft:</dt>
+      <dd><a href="http://webandbroadcasting.github.com/tvs-n-other-screens/">http://webandbroadcasting.github.com/tvs-n-other-screens/</a></dd>
+    
+    
+
+    
+    
+    <dt>Editors:</dt>
+    <dd><span>Kohei Kawakami</span>, Nippon Television Network Corporation</dd>
+<dd><span>Jiro Hirono</span>, Fuji Television Network, inc.</dd>
+<dd><a href="mailto:yfuna@tomo-digi.co.jp">Yosuke Funahashi</a>, <a href="http://www.tomo-digi.co.jp">Tomo-Digi Corporation</a></dd>
+
+    
+  </dl>
+  
+  
+  
+  
+<p class="copyright">
+    <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 
+    2013
+    the Contributors to the Repository of Existing Business-Level Use Cases for TVs In Tandem With Other Screens that Enrich Programs and Commercials via the Web Note, published by the
+    <a href="http://www.w3.org/community/webandbroadcasting/">Web and Broadcasting Business Group</a> under the
+    
+      <a href="https://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a>.
+      A human-readable <a href="http://www.w3.org/community/about/agreements/cla-deed/">summary</a> is available.
+    
+  </p>
+    
+  
+  <hr>
+</div>
+
+
+<section id="abstract" class="introductory"><h2>Abstract</h2>
+<h4 id="objectives">Objectives</h4>
+The existing business-level use cases captured here have been collected and categorized to serve as initial entries into an evolving repository for and aggregator of use cases from around the world to foster development and technical standardization in this field, and to present broadcasters' expectations in developing such services.
+<h4 id="background">Background</h4>
+<p>Smartphones and tablets are rapidly spreading around the world, and 80% of TV viewers in developed countries are using smartphones or tablets while watching TV programs and commercials, according to recent research.</p>
+<p>Without any help from advanced technology, some users are simultaneously enjoying information and communication via several devices through their advanced multi-tasking skills, and some broadcasting services have been designed to appeal to these users.</p>
+<p>Until now, there has not been a repository document that has collected and categorized existing and recognizable business-level use cases in <abbr title="World Wide Web Consortium">W3C</abbr>.</p>
+<p>The future multi-screen services related to TV programs and commercials may be innovative and remarkably progressive beyond extrapolations from existing services. Even if it might be true, it would be valuable for the development and standardization of this field to collect and categorize existing business-level use cases, which captures the current actual behaviour of users.</p>
+<p>The group is happy to work with SDOs and other groups in and around <abbr title="World Wide Web Consortium">W3C</abbr> to build this repository.</p>
+</section><section id="sotd" class="introductory"><h2>Status of This Document</h2>
+  
+
+<p>
+    This note was published by the <a href="http://www.w3.org/community/webandbroadcasting/">Web and Broadcasting Business Group</a>.
+    It is not a W3C Standard nor is it on the W3C Standards Track.
+    
+      Please note that under the 
+      <a href="https://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a>
+      there is a limited opt-out and other conditions apply.
+    
+    Learn more about 
+    <a href="http://www.w3.org/community/">W3C Community and Business Groups</a>.
+  </p>
+      
+    
+  
+</section><section id="toc"><h2 class="introductory">Table of Contents</h2><ul class="toc"><li class="tocline"><a href="#use-cases" class="tocxref"><span class="secno">1. </span>Use Cases</a><ul class="toc"><li class="tocline"><a href="#package-1-get-detailed-information..." class="tocxref"><span class="secno">1.1 </span>Package 1: Get detailed information...</a><ul class="toc"><li class="tocline"><a href="#uc1-...by-searching-the-web" class="tocxref"><span class="secno">1.1.1 </span>UC1: ...by searching the Web</a></li><li class="tocline"><a href="#uc2-...from-supplied-urls" class="tocxref"><span class="secno">1.1.2 </span>UC2: ...from supplied URLs</a></li><li class="tocline"><a href="#uc3-...on-the-olympic-games" class="tocxref"><span class="secno">1.1.3 </span>UC3: ...on the Olympic Games</a></li><li class="tocline"><a href="#uc4-...about-commercials-by-searching-the-web" class="tocxref"><span class="secno">1.1.4 </span>UC4: ...about commercials by searching the Web</a></li><li class="tocline"><a href="#uc5-...about-commercials-from-supplied-urls" class="tocxref"><span class="secno">1.1.5 </span>UC5: ...about commercials from supplied URLs</a></li></ul></li><li class="tocline"><a href="#package-2-purchase-products-or-services-displayed-in-tv-programs..." class="tocxref"><span class="secno">1.2 </span>Package 2: Purchase products or services displayed in TV programs...</a><ul class="toc"><li class="tocline"><a href="#uc6-...by-searching-the-web" class="tocxref"><span class="secno">1.2.1 </span>UC6: ...by searching the Web</a></li><li class="tocline"><a href="#uc7-...from-supplied-urls" class="tocxref"><span class="secno">1.2.2 </span>UC7: ...from supplied URLs</a></li><li class="tocline"><a href="#uc8-...within-commercials" class="tocxref"><span class="secno">1.2.3 </span>UC8: ...within commercials</a></li></ul></li><li class="tocline"><a href="#package-3-watch-videos-related-to-tv-programs..." class="tocxref"><span class="secno">1.3 </span>Package 3: Watch videos related to TV programs...</a><ul class="toc"><li class="tocline"><a href="#uc9-...on-companion-devices" class="tocxref"><span class="secno">1.3.1 </span>UC9: ...on companion devices</a></li></ul></li><li class="tocline"><a href="#package-4-join-promotional-campaigns-to-win-prizes..." class="tocxref"><span class="secno">1.4 </span>Package 4: Join promotional campaigns to win prizes...</a><ul class="toc"><li class="tocline"><a href="#uc10-...using-companion-devices" class="tocxref"><span class="secno">1.4.1 </span>UC10: ...using companion devices</a></li></ul></li><li class="tocline"><a href="#package-5-share-viewing-experience-with-friends..." class="tocxref"><span class="secno">1.5 </span>Package 5: Share viewing experience with friends...</a><ul class="toc"><li class="tocline"><a href="#uc11-...by-posting-interesting-comments-on-the-web" class="tocxref"><span class="secno">1.5.1 </span>UC11: ...by posting interesting comments on the Web</a></li><li class="tocline"><a href="#uc12-...in-a-virtual-living-room" class="tocxref"><span class="secno">1.5.2 </span>UC12: ...in a virtual living room</a></li></ul></li><li class="tocline"><a href="#package-6-share-viewing-experience-publicly..." class="tocxref"><span class="secno">1.6 </span>Package 6: Share viewing experience publicly...</a><ul class="toc"><li class="tocline"><a href="#uc13-...with-hashtags-of-related-topics" class="tocxref"><span class="secno">1.6.1 </span>UC13: ...with hashtags of related topics</a></li><li class="tocline"><a href="#uc14-...with-supplied-hashtags" class="tocxref"><span class="secno">1.6.2 </span>UC14: ...with supplied hashtags</a></li></ul></li><li class="tocline"><a href="#package-7-watch-tv-programs-on-tv-sets..." class="tocxref"><span class="secno">1.7 </span>Package 7: Watch TV programs on TV sets...</a><ul class="toc"><li class="tocline"><a href="#uc15-...after-learning-about-interesting-features-of-the-programs-via-the-web" class="tocxref"><span class="secno">1.7.1 </span>UC15: ...after learning about interesting features of the programs via the Web</a></li></ul></li><li class="tocline"><a href="#package-8-participate-in-interactive-tv-programs..." class="tocxref"><span class="secno">1.8 </span>Package 8: Participate in interactive TV programs...</a><ul class="toc"><li class="tocline"><a href="#uc16-...through-quizzes-or-questionnaires" class="tocxref"><span class="secno">1.8.1 </span>UC16: ...through quizzes or questionnaires</a></li><li class="tocline"><a href="#uc17-...by-voting-and-or-participating-in-a-poll" class="tocxref"><span class="secno">1.8.2 </span>UC17: ...by voting and/or participating in a poll</a></li><li class="tocline"><a href="#uc18-...by-sending-photos-and-messages" class="tocxref"><span class="secno">1.8.3 </span>UC18: ...by sending photos and messages</a></li></ul></li><li class="tocline"><a href="#package-9-continue-watching-tv-programs..." class="tocxref"><span class="secno">1.9 </span>Package 9: Continue watching TV programs...</a><ul class="toc"><li class="tocline"><a href="#uc19-...by-transferring-tv-program-or-channel-information-from-device-a-to-device-b" class="tocxref"><span class="secno">1.9.1 </span>UC19: ...by transferring TV program or channel information from device A to device B</a></li></ul></li></ul></li><li class="tocline"><a href="#using-companion-apps-to-greatly-improve-ux" class="tocxref"><span class="secno">2. </span>Using Companion Apps To Greatly Improve UX</a></li><li class="tocline"><a href="#using-time-sync-technologies-to-dramatically-improve-ux" class="tocxref"><span class="secno">3. </span>Using Time-Sync Technologies To Dramatically Improve UX</a></li><li class="tocline"><a href="#using-acr-to-improve-dumb-tv-set-ux" class="tocxref"><span class="secno">4. </span>Using ACR To Improve Dumb TV Set UX</a><ul class="toc"><li class="tocline"><a href="#brief-introduction-to-acr" class="tocxref"><span class="secno">4.1 </span>Brief Introduction to ACR</a><ul class="toc"><li class="tocline"><a href="#package-1-uc3-variation-using-acr" class="tocxref"><span class="secno">4.1.1 </span>Package 1: UC3 Variation Using ACR</a></li></ul></li><li class="tocline"><a href="#the-potential-of-acr" class="tocxref"><span class="secno">4.2 </span>The Potential of ACR</a></li></ul></li><li class="tocline"><a href="#broadcaster-s-expectation" class="tocxref"><span class="secno">5. </span>Broadcaster's Expectation</a></li><li class="tocline"><a href="#acknowledgements" class="tocxref"><span class="secno">A. </span>Acknowledgements</a></li></ul></section>
+<section id="use-cases">
+<!--OddPage--><h2><span class="secno">1. </span>Use Cases</h2>
+<a href="http://www.w3.org/community/webandbroadcasting/wiki/images/6/61/Packages.png" class="image" title="Packages.png"><img alt="" src="http://www.w3.org/community/webandbroadcasting/wiki/images/6/61/Packages.png" width="1200" height="465" style="border:1px solid #dddddd"></a>
+<section id="package-1-get-detailed-information...">
+<h3><span class="secno">1.1 </span>Package 1: Get detailed information...</h3>
+<div style="float: right; clear: right; margin-bottom: .5em; margin-left: 10px;"><div style="width: 182px; border: 1px solid #ccc; background-color: #f9f9f9; padding: 3px !important; font-size: 94%; text-align: center; overflow: hidden;"><a href="http://www.w3.org/community/webandbroadcasting/wiki/File:Package1_Get_detaild_information...png" title="Package 1"><img alt="" src="http://www.w3.org/community/webandbroadcasting/wiki/images/thumb/7/78/Package1_Get_detaild_information...png/180px-Package1_Get_detaild_information...png" width="180" border="0" style="border: 1px solid #ccc; background-color: #f9f9f9; font-size: 94%; text-align: center; overflow: hidden;"></a>Package 1</div></div>
+<section id="uc1-...by-searching-the-web">
+<h4><span class="secno">1.1.1 </span>UC1: ...by searching the Web</h4>
+<ul>
+<li> Brief description:
+<ul>
+<li> User looks for additional information on topics contained in TV programs by searching the Web on companion devices.
+</li>
+</ul>
+</li>
+<li> Primary actor:
+<ul>
+<li> User</li>
+</ul>
+</li>
+<li> Stakeholders:
+<ul>
+<li> Broadcaster</li>
+<li> Search Engine Service</li>
+<li> Manufacturer</li>
+</ul>
+</li>
+<li> Basic flow:
+<ul>
+<li> 1. User is watching a TV program on a TV set.</li>
+<li> 2. User is curious about a topic shown in the TV program.</li>
+<li> 3. User searches the Web for related information using a Search Engine Service on a companion device. User uses key words from the TV program or of their own choice.</li>
+<li> 4. Search Engine Service shows a list of links on the companion device.</li>
+<li> 5. User selects a link of interest on the companion device.</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="uc2-...from-supplied-urls">
+<h4><span class="secno">1.1.2 </span>UC2: ...from supplied URLs</h4>
+<ul>
+<li> Brief description:
+<ul>
+<li> User gets additional information on wineries contained in a TV program by manually inputting URLs or by scanning QR codes displayed on the TV screen into a companion device.
+</li>
+</ul>
+</li>
+<li> Primary actor:
+<ul>
+<li> User</li>
+</ul>
+</li>
+<li> Stakeholders:
+<ul>
+<li> Broadcaster</li>
+<li> Manufacturer</li>
+</ul>
+</li>
+<li> Basic flow:
+<ul>
+<li> 1. User is watching a TV program on a TV set.</li>
+<li> 2. Broadcaster displays a URL or a QR code tied to a wine or winery contained in the TV program.</li>
+<li> 3. User inputs the URL into a companion device or scans the QR code with a QR code reader built into the device.</li>
+<li> 4. The companion device shows the user the web page from the URL or the QR code.</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="uc3-...on-the-olympic-games">
+<h4><span class="secno">1.1.3 </span>UC3: ...on the Olympic Games</h4>
+<ul>
+<li> Brief description:
+<ul>
+<li> User gets additional information on content broadcast from the Summer Olympic Games by manually inputting URLs or by scanning QR codes displayed on the TV screen into a companion device.
+</li>
+</ul>
+</li>
+<li> Primary actor:
+<ul>
+<li> User</li>
+</ul>
+</li>
+<li> Stakeholders:
+<ul>
+<li> Broadcaster</li>
+<li> Manufacturer</li>
+</ul>
+</li>
+<li> Basic flow:
+<ul>
+<li> 1. User is watching the Summer Olympic Games on a TV set.</li>
+<li> 2. Broadcaster displays a URL or a QR code tied to a sport or an athlete.</li>
+<li> 3. User inputs the URL into a companion device or scans the QR code with a QR code reader built into the device.</li>
+<li> 4. The companion device shows the web page from the URL or the QR code to the user.</li>
+</ul>
+</li>
+<li> Note:
+<ul>
+<li> This web page also contains additional links to information about the Olympic Games. User can navigate beyond the sport or the athlete by following these links.</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="uc4-...about-commercials-by-searching-the-web">
+<h4><span class="secno">1.1.4 </span>UC4: ...about commercials by searching the Web</h4>
+<ul>
+<li> Brief description:
+<ul>
+<li> User gets additional information related to commercials broadcast during TV programs by manually inputting key word search terms into a search engine on a companion device.
+</li>
+</ul>
+</li>
+<li> Primary actor:
+<ul>
+<li> User</li>
+</ul>
+</li>
+<li> Stakeholders:
+<ul>
+<li> Broadcaster</li>
+<li> Manufacturer</li>
+<li> Sponsor</li>
+<li> Search Engine Service</li>
+</ul>
+</li>
+<li> Basic flow:
+<ul>
+<li> 1. User is watching a TV program on a TV set.</li>
+<li> 2. Broadcaster airs a commercial during the TV program.</li>
+<li> 3. Broadcaster displays and/or voices over key words tied to the commercial.</li>
+<li> 4. User inputs the key words into a search engine on a companion device.</li>
+<li> 5. Search Engine Service shows a list of links on the companion device. The link to the web page tied to the commercial is shown at the top of the list.</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="uc5-...about-commercials-from-supplied-urls">
+<h4><span class="secno">1.1.5 </span>UC5: ...about commercials from supplied URLs</h4>
+<ul>
+<li> Brief description:
+<ul>
+<li> User gets additional information related to commercials broadcast during TV programs by manually inputting URLs or by scanning QR codes displayed on the TV screen into a companion device.
+</li>
+</ul>
+</li>
+<li> Primary actor:
+<ul>
+<li> User</li>
+</ul>
+</li>
+<li> Stakeholders:
+<ul>
+<li> Broadcaster</li>
+<li> Sponsor</li>
+<li> Manufacturer</li>
+</ul>
+</li>
+<li> Basic flow:
+<ul>
+<li> 1. User is watching a TV program on a TV set.</li>
+<li> 2. Broadcaster airs a commercial during the TV program which informs the user of a URL. This is done by displaying and/or announcing the URL string. This is also done by displaying a QR code.</li>
+<li> 3. User inputs the URL into a companion device or scans the QR code with a QR code reader built into the device.</li>
+<li> 4. The companion device shows the user the web page from the URL or the QR code.</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+
+<section id="package-2-purchase-products-or-services-displayed-in-tv-programs...">
+<h3><span class="secno">1.2 </span>Package 2: Purchase products or services displayed in TV programs...</h3>
+<div style="float: right; clear: right; margin-bottom: .5em; margin-left: 10px;"><div style="width: 182px; border: 1px solid #ccc; background-color: #f9f9f9; padding: 3px !important; font-size: 94%; text-align: center; overflow: hidden;"><a href="http://www.w3.org/community/webandbroadcasting/wiki/File:Package2_Purchase_products_or_services_displayed_in_TV_programs...png" title="Package 2"><img alt="" src="http://www.w3.org/community/webandbroadcasting/wiki/images/thumb/e/e3/Package2_Purchase_products_or_services_displayed_in_TV_programs...png/180px-Package2_Purchase_products_or_services_displayed_in_TV_programs...png" width="180" border="0" style="border: 1px solid #ccc; background-color: #f9f9f9; font-size: 94%; text-align: center; overflow: hidden;"></a>Package 2</div></div>
+<section id="uc6-...by-searching-the-web">
+<h4><span class="secno">1.2.1 </span>UC6: ...by searching the Web</h4>
+<ul>
+<li> Brief description:
+<ul>
+<li> User looks for additional information on products or services displayed in TV programs by searching the Web on companion devices, then purchases the products or services via the devices.
+</li>
+</ul>
+</li>
+<li> Primary actor:
+<ul>
+<li> User</li>
+</ul>
+</li>
+<li> Stakeholders:
+<ul>
+<li> Broadcaster</li>
+<li> Search Engine Service</li>
+<li> Online Vendor</li>
+<li> Manufacturer</li>
+</ul>
+</li>
+<li> Basic flow:
+<ul>
+<li> 1. User is watching a TV program on a TV set.</li>
+<li> 2. User is curious about a product or service displayed in the TV program.</li>
+<li> 3. User searches the Web for related information using Search Engine Service on a companion device. User uses key words of their own choice or from the TV program.</li>
+<li> 4. Search Engine Service shows a list of links on the companion device.</li>
+<li> 5. The list contains 1) links to manufactures' or service providers' web sites, and/or 2) links to Online Vendor that deals with the product or service, and/or 3) links to reviews of the product or service such as magazine articles, blog entries, micro-blog posts, and SNS pages.</li>
+<li> 6. User selects a link of interest on the companion device, learns about the product or service in detail, and purchases the product or service via Online Vendor.</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="uc7-...from-supplied-urls">
+<h4><span class="secno">1.2.2 </span>UC7: ...from supplied URLs</h4>
+<ul>
+<li> Brief description:
+<ul>
+<li> User gets additional information on wineries contained in a TV program by manually inputting into a companion device URLs or by scanning QR codes displayed on the TV screen, then purchases products via the devices.
+</li>
+</ul>
+</li>
+<li> Primary actor:
+<ul>
+<li> User</li>
+</ul>
+</li>
+<li> Stakeholders:
+<ul>
+<li> Broadcaster</li>
+<li> Online Vendor</li>
+<li> Manufacturer</li>
+</ul>
+</li>
+<li> Basic flow:
+<ul>
+<li> 1. User is watching a TV program on a TV set.</li>
+<li> 2. Broadcaster displays a URL or a QR code tied to a wine or winery featured in the TV program.</li>
+<li> 3. User inputs the URL into a companion device or scans the QR code with a QR code reader built into the device.</li>
+<li> 4. The companion device shows the user the web page from the URL or the QR code.</li>
+<li> 5. User buys the wine and/or other wines at the web site or via Online Vendor which the web page contains links to.</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="uc8-...within-commercials">
+<h4><span class="secno">1.2.3 </span>UC8: ...within commercials</h4>
+<ul>
+<li> Brief description:
+<ul>
+<li> User gets additional information related to commercials broadcast during TV programs by manually inputting into a companion device URLs or by scanning QR codes displayed on the TV screen, then purchases products or services the commercials feature via the devices.
+</li>
+</ul>
+</li>
+<li> Primary actor:
+<ul>
+<li> User</li>
+</ul>
+</li>
+<li> Stakeholders:
+<ul>
+<li> Broadcaster</li>
+<li> Online Vendor</li>
+<li> Manufacturer</li>
+</ul>
+</li>
+<li> Basic flow:
+<ul>
+<li> 1. User is watching a TV program on a TV set.</li>
+<li> 2. Broadcaster airs a commercial during the TV program which informs the user of a URL. This is done by displaying and/or announcing the URL string. This is also done by displaying a QR code.</li>
+<li> 3. User inputs the URL into a companion device or scans the QR code with a QR code reader built into the device.</li>
+<li> 4. The companion device shows the user the web page from the URL or the QR code.</li>
+<li> 5. User receives additional information about the products or services.</li>
+<li> 6. User purchases the products or services at the web site or via Online Vendor which the web page contains links to.</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+
+<section id="package-3-watch-videos-related-to-tv-programs...">
+<h3><span class="secno">1.3 </span>Package 3: Watch videos related to TV programs...</h3>
+<div style="float: right; clear: right; margin-bottom: .5em; margin-left: 10px;"><div style="width: 182px; border: 1px solid #ccc; background-color: #f9f9f9; padding: 3px !important; font-size: 94%; text-align: center; overflow: hidden;"><a href="http://www.w3.org/community/webandbroadcasting/wiki/File:Package3_Watch_videos_related_to_TV_programs...png" title="Package 3"><img alt="" src="http://www.w3.org/community/webandbroadcasting/wiki/images/thumb/d/d3/Package3_Watch_videos_related_to_TV_programs...png/180px-Package3_Watch_videos_related_to_TV_programs...png" width="180" border="0" style="border: 1px solid #ccc; background-color: #f9f9f9; font-size: 94%; text-align: center; overflow: hidden;"></a>Package 3</div></div>
+<section id="uc9-...on-companion-devices">
+<h4><span class="secno">1.3.1 </span>UC9: ...on companion devices</h4>
+<ul>
+<li> Brief description:
+<ul>
+<li> User watches videos such as previous episodes, episodes from other seasons of the TV program, or other TV programs featuring the same actors or similar themes via VOD services on the Web.
+</li>
+</ul>
+</li>
+<li> Primary actor:
+<ul>
+<li> User</li>
+</ul>
+</li>
+<li> Stakeholders:
+<ul>
+<li> Broadcaster</li>
+<li> VOD Service</li>
+<li> Manufacturer</li>
+</ul>
+</li>
+<li> Basic flow:
+<ul>
+<li> 1. User is watching a TV program on a TV set.</li>
+<li> 2. Broadcaster displays a URL or a QR code tied to VOD Service that deals with the previous episode, episodes from other seasons of the TV program, and/or other TV programs featuring the same actors or similar themes .</li>
+<li> 3. User inputs the URL into a companion device or scans the QR code with a QR code reader built into the device.</li>
+<li> 4. The companion device shows the user the web page of the VOD Service from the URL or the QR code.</li>
+<li> 5. User purchases and watches videos via VOD Service.</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+
+<section id="package-4-join-promotional-campaigns-to-win-prizes...">
+<h3><span class="secno">1.4 </span>Package 4: Join promotional campaigns to win prizes...</h3>
+<div style="float: right; clear: right; margin-bottom: .5em; margin-left: 10px;"><div style="width: 182px; border: 1px solid #ccc; background-color: #f9f9f9; padding: 3px !important; font-size: 94%; text-align: center; overflow: hidden;"><a href="http://www.w3.org/community/webandbroadcasting/wiki/File:Package4_Join_promotional_campaigns_to_win_prizes...png" title="Package 4"><img alt="" src="http://www.w3.org/community/webandbroadcasting/wiki/images/thumb/b/b5/Package4_Join_promotional_campaigns_to_win_prizes...png/180px-Package4_Join_promotional_campaigns_to_win_prizes...png" width="180" border="0" style="border: 1px solid #ccc; background-color: #f9f9f9; font-size: 94%; text-align: center; overflow: hidden;"></a>Package 4</div></div>
+<section id="uc10-...using-companion-devices">
+<h4><span class="secno">1.4.1 </span>UC10: ...using companion devices</h4>
+<ul>
+<li> Brief description:
+<ul>
+<li> User joins promotional campaigns organised by broadcasters to win prizes.
+</li>
+</ul>
+</li>
+<li> Primary actor:
+<ul>
+<li> User</li>
+</ul>
+</li>
+<li> Stakeholders:
+<ul>
+<li> Broadcaster</li>
+<li> Manufacturer</li>
+</ul>
+</li>
+<li> Basic flow:
+<ul>
+<li> 1. User is watching a TV program on a TV set.</li>
+<li> 2. Broadcaster displays a URL or a QR code tied to a promotional campaign.</li>
+<li> 3. User inputs the URL into a companion device or scans the QR code with a QR code reader built into the device.</li>
+<li> 4. The companion device shows the user the web page of the promotional campaign from the URL or the QR code.</li>
+<li> 5. User submits an entry into the promotional campaign via the companion device for the chance to win a prize and the broadcaster recieve the user's entry.</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+
+<section id="package-5-share-viewing-experience-with-friends...">
+<h3><span class="secno">1.5 </span>Package 5: Share viewing experience with friends...</h3>
+<div style="float: right; clear: right; margin-bottom: .5em; margin-left: 10px;"><div style="width: 182px; border: 1px solid #ccc; background-color: #f9f9f9; padding: 3px !important; font-size: 94%; text-align: center; overflow: hidden;"><a href="http://www.w3.org/community/webandbroadcasting/wiki/File:Package5_Share_viewing_experience_with_friends...png" title="Package 5"><img alt="" src="http://www.w3.org/community/webandbroadcasting/wiki/images/thumb/4/42/Package5_Share_viewing_experience_with_friends...png/180px-Package5_Share_viewing_experience_with_friends...png" width="180" border="0" style="border: 1px solid #ccc; background-color: #f9f9f9; font-size: 94%; text-align: center; overflow: hidden;"></a>Package 5</div></div>
+<section id="uc11-...by-posting-interesting-comments-on-the-web">
+<h4><span class="secno">1.5.1 </span>UC11: ...by posting interesting comments on the Web</h4>
+<ul>
+<li> Brief description:
+<ul>
+<li> User finds an interesting scene on a TV program and sends comments to share his or her impressions with his or her friends on a companion device by e-mail, SMS or micro-blog.
+</li>
+</ul>
+</li>
+<li> Primary actor:
+<ul>
+<li> User</li>
+</ul>
+</li>
+<li> Stakeholders:
+<ul>
+<li> Broadcaster</li>
+<li> User/Friend</li>
+<li> E-mail Service</li>
+<li> SMS</li>
+<li> Micro-blog Service</li>
+<li> Manufacturer</li>
+</ul>
+</li>
+<li> Basic flow:
+<ul>
+<li> 1. User is watching a TV program on a TV set.</li>
+<li> 2. User finds an interesting scene in the TV program.</li>
+<li> 3. User uses a companion device to share his or her impressions with his or her friends by e-mail, SMS or micro-blog.</li>
+<li> 4. Friend receives the user's comment on a companion device.</li>
+<li> 5. Friend acts on the user's comment and watches the TV program on his or her TV set.</li>
+</ul>
+</li>
+<li> Extensions:
+<ul>
+<li> 5a. If the user's original comment is negative, the friend may or may not watch the program.</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="uc12-...in-a-virtual-living-room">
+<h4><span class="secno">1.5.2 </span>UC12: ...in a virtual living room</h4>
+<ul>
+<li> Brief description:
+<ul>
+<li> A group of users arrange to view a TV program remotely and enjoy the program as though they were together in a living room by using e-mail, SMS or micro-blog on a companion device.
+</li>
+</ul>
+</li>
+<li> Primary actor:
+<ul>
+<li> User</li>
+</ul>
+</li>
+<li> Stakeholders:
+<ul>
+<li> Broadcaster</li>
+<li> User/Friend</li>
+<li> E-mail Service</li>
+<li> SMS</li>
+<li> Micro-blog Service</li>
+<li> Manufacturer</li>
+</ul>
+</li>
+<li> Basic flow:
+<ul>
+<li> 1. A group of users plan on their companion devices to view a TV program together but remotely.</li>
+<li> 2. Each user starts watching the TV program on their own TV set.</li>
+<li> 3. The users share their impressions of scenes of interest via e-mail, SMS or micro-blog. An active dialogue between users ensues.</li>
+</ul>
+</li>
+</ul></section>
+</section>
+
+<section id="package-6-share-viewing-experience-publicly...">
+<h3><span class="secno">1.6 </span>Package 6: Share viewing experience publicly...</h3>
+<div style="float: right; clear: right; margin-bottom: .5em; margin-left: 10px;"><div style="width: 182px; border: 1px solid #ccc; background-color: #f9f9f9; padding: 3px !important; font-size: 94%; text-align: center; overflow: hidden;"><a href="http://www.w3.org/community/webandbroadcasting/wiki/File:Package6_Share_viewing_experience_publicly...png" title="Package 6"><img alt="" src="http://www.w3.org/community/webandbroadcasting/wiki/images/thumb/5/58/Package6_Share_viewing_experience_publicly...png/180px-Package6_Share_viewing_experience_publicly...png" width="180" border="0" style="border: 1px solid #ccc; background-color: #f9f9f9; font-size: 94%; text-align: center; overflow: hidden;"></a>Package 6</div></div>
+<section id="uc13-...with-hashtags-of-related-topics">
+<h4><span class="secno">1.6.1 </span>UC13: ...with hashtags of related topics</h4>
+<ul>
+<li> Brief description:
+<ul>
+<li> User posts and shares their impressions of a TV program publicly on a micro-blog using a popular hashtag via companion devices.
+</li>
+</ul>
+</li>
+<li> Primary actor:
+<ul>
+<li> User</li>
+</ul>
+</li>
+<li> Stakeholders:
+<ul>
+<li> Broadcaster</li>
+<li> Micro-blog Service</li>
+<li> Manufacturer</li>
+</ul>
+</li>
+<li> Basic flow:
+<ul>
+<li> 1. User finds an interesting scene in a TV program.</li>
+<li> 2. User identifies a popular hashtag on a micro-blog for the TV program provided by other users, the Web, or the TV program.</li>
+<li> 3. User posts his or her impressions publicly using the hashtag on a micro-blog via a companion device.</li>
+<li> 4. Other users of the micro-blog find the user's post by using the hashtag and join the public discussion.</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="uc14-...with-supplied-hashtags">
+<h4><span class="secno">1.6.2 </span>UC14: ...with supplied hashtags</h4>
+<ul>
+<li> Brief description:
+<ul>
+<li> User publicly posts their impressions of a TV program or opinions on topics under discussion about the program via companion devices on a micro-blog using hashtags provided by the broadcaster. Some posts are presented in the TV program and enable the users to actually participate in creating the broadcast content.
+</li>
+</ul>
+</li>
+<li> Primary actor:
+<ul>
+<li> User</li>
+</ul>
+</li>
+<li> Stakeholders:
+<ul>
+<li> Broadcaster</li>
+<li> Micro-blog Service</li>
+<li> Manufacturer</li>
+</ul>
+</li>
+<li> Basic flow:
+<ul>
+<li> 1. User is watching a TV program on a TV set.</li>
+<li> 2. Broadcaster promotes hashtags on the TV program and encourages users to post via companion devices their comments on the TV program or topics under discussion using these hashtags on a micro-blog.</li>
+<li> 3. User posts his or her comment on the micro-blog with the hashtags via a companion device.</li>
+<li> 4. Broadcaster selects user's comments after filtering the micro-blog postings with the hashtags.</li>
+<li> 5. Broadcaster displays for all viewers some user's comments in the program.</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+
+<section id="package-7-watch-tv-programs-on-tv-sets...">
+<h3><span class="secno">1.7 </span>Package 7: Watch TV programs on TV sets...</h3>
+<div style="float: right; clear: right; margin-bottom: .5em; margin-left: 10px;"><div style="width: 182px; border: 1px solid #ccc; background-color: #f9f9f9; padding: 3px !important; font-size: 94%; text-align: center; overflow: hidden;"><a href="http://www.w3.org/community/webandbroadcasting/wiki/File:Package7_Watch_TV_programs_on_TV_sets...png" title="Package 7"><img alt="" src="http://www.w3.org/community/webandbroadcasting/wiki/images/thumb/0/07/Package7_Watch_TV_programs_on_TV_sets...png/180px-Package7_Watch_TV_programs_on_TV_sets...png" width="180" border="0" style="border: 1px solid #ccc; background-color: #f9f9f9; font-size: 94%; text-align: center; overflow: hidden;"></a>Package 7</div></div>
+<section id="uc15-...after-learning-about-interesting-features-of-the-programs-via-the-web">
+<h4><span class="secno">1.7.1 </span>UC15: ...after learning about interesting features of the programs via the Web</h4>
+<ul>
+<li> Brief description:
+<ul>
+<li> User comes across an enticing description about a TV program on the Web via a companion device and watches the TV program on a TV set.
+</li>
+</ul>
+</li>
+<li> Primary actor:
+<ul>
+<li> User</li>
+</ul>
+</li>
+<li> Stakeholders:
+<ul>
+<li> Broadcaster</li>
+<li> Manufacturer</li>
+</ul>
+</li>
+<li> Basic flow:
+<ul>
+<li> 1. User comes across an enticing description about a TV program on the Web via a companion device.</li>
+<li> 2. User watches the TV program on a TV set.</li>
+</ul>
+</li>
+<li> Note:
+<ul>
+<li> This is a generic use case. The Web has long been providing numerous ways to discover TV content and the editors see no reason to write a use case for each specific way users can discover TV programming on the Web at the time of publication of this document.</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+
+<section id="package-8-participate-in-interactive-tv-programs...">
+<h3><span class="secno">1.8 </span>Package 8: Participate in interactive TV programs...</h3>
+<div style="float: right; clear: right; margin-bottom: .5em; margin-left: 10px;"><div style="width: 182px; border: 1px solid #ccc; background-color: #f9f9f9; padding: 3px !important; font-size: 94%; text-align: center; overflow: hidden;"><a href="http://www.w3.org/community/webandbroadcasting/wiki/File:Package8_Participate_in_interactive_TV_programs...png" title="Package 8"><img alt="" src="http://www.w3.org/community/webandbroadcasting/wiki/images/thumb/b/b0/Package8_Participate_in_interactive_TV_programs...png/180px-Package8_Participate_in_interactive_TV_programs...png" width="180" border="0" style="border: 1px solid #ccc; background-color: #f9f9f9; font-size: 94%; text-align: center; overflow: hidden;"></a>Package 8</div></div>
+<section id="uc16-...through-quizzes-or-questionnaires">
+<h4><span class="secno">1.8.1 </span>UC16: ...through quizzes or questionnaires</h4>
+<ul>
+<li> Brief description:
+<ul>
+<li> Broadcaster provides quizzes or questionnaires on a companion as the program progresses and superimposes a selection of user responses or statistical results on TV screens.
+</li>
+</ul>
+</li>
+<li> Primary actor:
+<ul>
+<li> User</li>
+</ul>
+</li>
+<li> Stakeholders:
+<ul>
+<li> Broadcaster</li>
+<li> Manufacturer</li>
+<li> Online Survey Service</li>
+</ul>
+</li>
+<li> Basic flow:
+<ul>
+<li> 1. User is watching an interactive TV program on a TV set.</li>
+<li> 2. Broadcaster promotes interactive aspects of the TV program available through a companion device application.</li>
+<li> 3. User activates the application to particpate interactively with the TV program on a companion device.</li>
+<li> 4. Broadcaster provides quizzes or questionnaires in the application as the program progresses.</li>
+<li> 5. User inputs their choices or answers and submits them to the broadcaster.</li>
+<li> 6. Broadcaster compiles the responses and superimposes a selection of the responses and/or other statistical results on TV screens.</li>
+</ul>
+</li>
+<li> Note:
+<ul>
+<li> Broadcaster and Online Survey Service may partner to provide this use case.</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="uc17-...by-voting-and-or-participating-in-a-poll">
+<h4><span class="secno">1.8.2 </span>UC17: ...by voting and/or participating in a poll</h4>
+<ul>
+<li> Brief description:
+<ul>
+<li> Broadcaster invites users to cast votes and/or participate in a poll. User interacts via companion devices.
+</li>
+</ul>
+</li>
+<li> Primary actor:
+<ul>
+<li> User</li>
+</ul>
+</li>
+<li> Stakeholders:
+<ul>
+<li> Broadcaster</li>
+<li> Manufacturer</li>
+<li> Online Survey Service</li>
+</ul>
+</li>
+<li> Basic flow:
+<ul>
+<li> 1. User is watching an interactive TV program on a TV set.</li>
+<li> 2. Broadcaster promotes interactive aspects of the TV program available through a companion device application.</li>
+<li> 3. User activates the application to participate interactively with the TV program on a companion device.</li>
+<li> 4. Broadcaster invites users to cast votes and/or participate in a poll.</li>
+<li> 5. User inputs their choices and/or answers and submits them to the broadcaster.</li>
+<li> 6. Broadcaster compiles the responses and superimposes a selection of the responses and/or other statistical results on TV screens.</li>
+</ul>
+</li>
+<li> Note:
+<ul>
+<li> Broadcaster and Online Survey Service may partner to provide this use case.</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="uc18-...by-sending-photos-and-messages">
+<h4><span class="secno">1.8.3 </span>UC18: ...by sending photos and messages</h4>
+<ul>
+<li> Brief description:
+<ul>
+<li> Broadcaster displays photos and messages posted by users with companion devices.
+</li>
+</ul>
+</li>
+<li> Primary actor:
+<ul>
+<li> User</li>
+</ul>
+</li>
+<li> Stakeholders:
+<ul>
+<li> Broadcaster</li>
+<li> Manufacturer</li>
+<li> Photo Sharing Service</li>
+</ul>
+</li>
+<li> Basic flow:
+<ul>
+<li> 1. User is watching an interactive TV program on a TV set.</li>
+<li> 2. Broadcaster promotes interactive aspects of the TV program available through a companion device application.</li>
+<li> 3. User activates the application to participate interactively with the TV program on a companion device.</li>
+<li> 4. Broadcaster invites users to post photos and messages.</li>
+<li> 5. User submits their content to the broadcaster.</li>
+<li> 6. Broadcaster compiles then superimposes a selection of the posts on TV screens.</li>
+</ul>
+</li>
+<li> Note:
+<ul>
+<li> Broadcaster and Photo Sharing Service may partner to provide this use case.</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+
+<section id="package-9-continue-watching-tv-programs...">
+<h3><span class="secno">1.9 </span>Package 9: Continue watching TV programs...</h3>
+<section id="uc19-...by-transferring-tv-program-or-channel-information-from-device-a-to-device-b">
+<h4><span class="secno">1.9.1 </span>UC19: ...by transferring TV program or channel information from device A to device B</h4>
+<ul>
+<li> Brief description:
+<ul>
+<li> User watches a TV program on device A (typically a TV set) and continues on a different device (a kitchen TV set, a tablet, ...) upon changing their location. Note that device A and device B can be any TV set, tablet, phone.
+</li>
+</ul>
+</li>
+<li> Primary actor:
+<ul>
+<li> User</li>
+</ul>
+</li>
+<li> Stakeholders:
+<ul>
+<li> Broadcaster</li>
+<li> VOD Service</li>
+<li> Manufacturer</li>
+</ul>
+</li>
+<li> Basic flow:
+<ul>
+<li> 1. User is watching a TV program on device A</li>
+<li> 2. User decides to change their location but wants to continue viewing the TV program</li>
+<li> 3. User interacts with device A to select an alternative viewing device option</li>
+<li> 4. Available devices for viewing are proposed to the user</li>
+<li> 5. User selects device B</li>
+<li> 6. The TV program stops playing on device A. The TV program resumes playing on device B via either broadcast or VOD Service</li>
+</ul>
+</li>
+<li> Note:
+<ul>
+<li> Service providers in this use case determine if the video actually starts, or is ready to start but needs a specific user action on device B.</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="using-companion-apps-to-greatly-improve-ux">
+<!--OddPage--><h2><span class="secno">2. </span>Using Companion Apps To Greatly Improve UX</h2>
+<p>In the broadcasting industry, companion apps are applications on any device that are specifically designed to access broadcaster resources for specific TV program metadata and time synchronisation information, which clearly improves UX of use cases above.
+</p>
+<p>There are three classes of companion apps based on reach. The class of apps with the broadest reach works with all channels viewable on TV sets. The next class of apps is narrower and is applied to only one channel. Finally the last class of apps works with only one TV program.
+</p>
+</section>
+<section id="using-time-sync-technologies-to-dramatically-improve-ux">
+<!--OddPage--><h2><span class="secno">3. </span>Using Time-Sync Technologies To Dramatically Improve UX</h2>
+<p>The heart of TV programs and TV technologies is their temporal nature. Traditionally, the one and only UX TV has been providing is just showing the right pictures at the right time in a sufficient frequency, so it's a totally dynamic or temporal experience. By synchronising web apps' behaviours on companion devices in time with TV programs, it's clear we can experience a dramatic improvement in the UX of most use cases above.
+</p>
+<p>There are two methods to provide companion devices with time-sync information from TV programs.
+</p>
+<ul><li> Provide applications with timing information signals through in-band triggers in MPEG transport streams or out-band triggers sent from web servers via the Net.
+</li><li> Provide applications with files containing all timing information so that applications synchronise using the wall-clock model [1] with TV programs.
+<ul><li> [1] <a href="http://www.w3.org/TR/html5/single-page.html#offsets-into-the-media-resource" class="external free" title="http://www.w3.org/TR/html5/single-page.html#offsets-into-the-media-resource" rel="nofollow">http://www.w3.org/TR/html5/single-page.html#offsets-into-the-media-resource</a>
+</li></ul>
+</li></ul>
+</section>
+<section id="using-acr-to-improve-dumb-tv-set-ux">
+<!--OddPage--><h2><span class="secno">4. </span>Using ACR To Improve Dumb TV Set UX</h2>
+<section id="brief-introduction-to-acr">
+<h3><span class="secno">4.1 </span>Brief Introduction to ACR</h3>
+<p>The latest developments in watermarking and fingerprinting technologies are now seeing new applications enabling ACR (automatic content recognition) and also triggering specific events to smart devices. ACR for video and/or audio signals enables identification and synchronisation between broadcast, on-demand or recorded television content, and interactive applications on devices such as tablets, smartphones or laptops.</p>
+<section id="package-1-uc3-variation-using-acr">
+<h4><span class="secno">4.1.1 </span>Package 1: UC3 Variation Using ACR</h4>
+<p>An easy way to explain the benefits of ACR is to vary an existing use case. Here we simplify Package 1: UC3 above to illustrate ACR's potential effect on our use cases.
+</p>
+<ul><li> Package 1: UC3: Get detailed information on the Olympic Games
+<ul><li> Basic description:
+<ul><li> User receives additional information on content broadcast from the Summer Olympic Games by activating ACR apps available on companion devices.
+</li></ul>
+</li><li> Basic flow:
+<ul><li> 1. User is watching the Summer Olympic Games on a TV set.
+</li><li> 2. User activates an ACR app available on a companion device. Following the result of scene recognition by the ACR app, the companion device displays either content from the portal of the Olympic Games web site or detailed information about the sport being viewed.
+</li></ul>
+</li><li> Note:
+<ul><li> This ACR app also contains additional links to information about the Olympic Games. User can navigate beyond the sport or the athlete by following these links.
+</li></ul>
+</li></ul>
+</li></ul>
+</section>
+</section>
+<section id="the-potential-of-acr">
+<h3><span class="secno">4.2 </span>The Potential of ACR</h3>
+<ul><li> Use of ACR can reduce a number of steps required for users to link to TV programs on companion devices.
+</li><li> Once ACR hits critical mass, broadcasters can use ACR to synchronise a broader range of content displayed on apps even during live TV programs without the need for additional web servers and bandwidth.
+</li></ul>
+</section>
+</section>
+<section id="broadcaster-s-expectation">
+<!--OddPage--><h2><span class="secno">5. </span>Broadcaster's Expectation</h2>
+<ul><li> Multiple screens could create promising new services through their smarter combinations with TV programs and commercials. Broadcasters would expect that web apps on a TV set and web apps on a companion device could link, connect and interact with each other to enable creating innovative TV programs and commercials easily.
+</li><li> TV broadcasting is one of mass communication media, which is good at delivering same content and services to all TV sets in its region efficiently. To make good use of this nature of TV broadcasting, broadcasters would expect that mechanisms to cope with connecting any kind of TV sets with any kind of companion devices easily would be provided.
+</li></ul>
+</section>
+
+    <section class="appendix" id="acknowledgements">
+      <!--OddPage--><h2><span class="secno">A. </span>Acknowledgements</h2>
+      <p>
+        Thanks to Tim Berners-Lee for inventing HTML, without which none of this would exist.
+      </p>
+      <p>
+      	The editors would like to thank Olivier Thereaux and Jean-Charles Verdié for their contributions to this note.
+<contributors>
+      </contributors></p>
+    </section>
+  
+
+</body></html>
